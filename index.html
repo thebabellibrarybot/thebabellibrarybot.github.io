@@ -30,11 +30,22 @@
     <nav class="navbar" id="navbar">
         <div class="nav-container">
             <div class="nav-logo">
-                <a href="#home">Display x Design</a>
+                <a href="#home">
+                    <img src="logo.svg" alt="Display x Design" class="logo-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='inline';">
+                    <span class="logo-text">Display x Design</span>
+                </a>
             </div>
             <div class="nav-menu" id="nav-menu">
                 <a href="#home" class="nav-link">Home</a>
-                <a href="#services" class="nav-link">Services</a>
+                <div class="dropdown">
+                    <a href="#services" class="nav-link dropdown-toggle">Services <i data-feather="chevron-down"></i></a>
+                    <div class="dropdown-content">
+                        <a href="#services">All Services</a>
+                        <a href="#services">Design & Fabrication</a>
+                        <a href="#services">Framing</a>
+                        <a href="#services">Art Installation</a>
+                    </div>
+                </div>
                 <a href="#portfolio" class="nav-link">Portfolio</a>
                 <a href="#contact" class="nav-link">Contact</a>
             </div>
@@ -211,20 +222,121 @@
                 <h3>Our Work</h3>
                 <p>Explore our portfolio of completed projects and products, including custom shelving units, display installations, and framed artworks.</p>
                 
-                <!-- Placeholder for portfolio gallery -->
+                <!-- Portfolio Gallery -->
                 <div class="portfolio-gallery">
-                    <div class="portfolio-placeholder">
-                        <div class="placeholder-icon">
-                            <i data-feather="camera"></i>
+                    <div class="portfolio-grid">
+                        <div class="portfolio-item">
+                            <div class="portfolio-image">
+                                <svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
+                                    <rect width="400" height="300" fill="#f0f0f0"/>
+                                    <rect x="50" y="50" width="300" height="20" fill="#333"/>
+                                    <rect x="50" y="90" width="300" height="20" fill="#333"/>
+                                    <rect x="50" y="130" width="300" height="20" fill="#333"/>
+                                    <rect x="50" y="170" width="300" height="20" fill="#333"/>
+                                    <rect x="50" y="210" width="300" height="20" fill="#333"/>
+                                    <text x="200" y="260" text-anchor="middle" font-family="Arial" font-size="16" fill="#666">Custom Floating Shelves</text>
+                                </svg>
+                            </div>
+                            <div class="portfolio-info">
+                                <h4>Modern Floating Shelves</h4>
+                                <p>Custom white oak floating shelves with integrated LED lighting for a contemporary living room.</p>
+                                <span class="portfolio-category">Design & Fabrication</span>
+                            </div>
                         </div>
-                        <p>Portfolio gallery coming soon</p>
-                        <p class="placeholder-note">Add your project images to showcase your work</p>
+                        
+                        <div class="portfolio-item">
+                            <div class="portfolio-image">
+                                <svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
+                                    <rect width="400" height="300" fill="#f0f0f0"/>
+                                    <rect x="50" y="50" width="300" height="200" fill="#333" stroke="#666" stroke-width="3"/>
+                                    <rect x="70" y="70" width="260" height="160" fill="#fff"/>
+                                    <text x="200" y="260" text-anchor="middle" font-family="Arial" font-size="16" fill="#666">Museum Quality Frame</text>
+                                </svg>
+                            </div>
+                            <div class="portfolio-info">
+                                <h4>Museum Quality Framing</h4>
+                                <p>Custom black walnut frame with conservation matting for a vintage photography collection.</p>
+                                <span class="portfolio-category">Framing</span>
+                            </div>
+                        </div>
+                        
+                        <div class="portfolio-item">
+                            <div class="portfolio-image">
+                                <svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
+                                    <rect width="400" height="300" fill="#f0f0f0"/>
+                                    <rect x="50" y="50" width="80" height="120" fill="#333"/>
+                                    <rect x="150" y="70" width="80" height="100" fill="#333"/>
+                                    <rect x="250" y="40" width="80" height="130" fill="#333"/>
+                                    <text x="200" y="260" text-anchor="middle" font-family="Arial" font-size="16" fill="#666">Gallery Wall Display</text>
+                                </svg>
+                            </div>
+                            <div class="portfolio-info">
+                                <h4>Gallery Wall Installation</h4>
+                                <p>Curated gallery wall with precision spacing and professional hanging hardware.</p>
+                                <span class="portfolio-category">Art Installation</span>
+                            </div>
+                        </div>
+                        
+                        <div class="portfolio-item">
+                            <div class="portfolio-image">
+                                <svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
+                                    <rect width="400" height="300" fill="#f0f0f0"/>
+                                    <rect x="50" y="50" width="300" height="200" fill="#333" stroke="#666" stroke-width="3"/>
+                                    <rect x="70" y="70" width="260" height="40" fill="#fff"/>
+                                    <rect x="70" y="120" width="260" height="40" fill="#fff"/>
+                                    <rect x="70" y="170" width="260" height="40" fill="#fff"/>
+                                    <circle cx="320" cy="90" r="8" fill="#ffd700"/>
+                                    <text x="200" y="280" text-anchor="middle" font-family="Arial" font-size="16" fill="#666">Illuminated Display Case</text>
+                                </svg>
+                            </div>
+                            <div class="portfolio-info">
+                                <h4>Illuminated Display Case</h4>
+                                <p>Custom glass display case with integrated LED lighting for collectible showcase.</p>
+                                <span class="portfolio-category">Design & Fabrication</span>
+                            </div>
+                        </div>
+                        
+                        <div class="portfolio-item">
+                            <div class="portfolio-image">
+                                <svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
+                                    <rect width="400" height="300" fill="#f0f0f0"/>
+                                    <rect x="50" y="50" width="300" height="150" fill="#333"/>
+                                    <rect x="70" y="70" width="60" height="110" fill="#fff"/>
+                                    <rect x="140" y="70" width="60" height="110" fill="#fff"/>
+                                    <rect x="210" y="70" width="60" height="110" fill="#fff"/>
+                                    <rect x="280" y="70" width="60" height="110" fill="#fff"/>
+                                    <text x="200" y="250" text-anchor="middle" font-family="Arial" font-size="16" fill="#666">Library Shelving System</text>
+                                </svg>
+                            </div>
+                            <div class="portfolio-info">
+                                <h4>Library Shelving System</h4>
+                                <p>Floor-to-ceiling library shelving with adjustable heights and built-in reading nook.</p>
+                                <span class="portfolio-category">Design & Fabrication</span>
+                            </div>
+                        </div>
+                        
+                        <div class="portfolio-item">
+                            <div class="portfolio-image">
+                                <svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
+                                    <rect width="400" height="300" fill="#f0f0f0"/>
+                                    <rect x="100" y="100" width="200" height="100" fill="#333" stroke="#666" stroke-width="3"/>
+                                    <rect x="120" y="120" width="160" height="60" fill="#fff"/>
+                                    <rect x="80" y="220" width="240" height="20" fill="#333"/>
+                                    <text x="200" y="270" text-anchor="middle" font-family="Arial" font-size="16" fill="#666">Picture Ledge Shelf</text>
+                                </svg>
+                            </div>
+                            <div class="portfolio-info">
+                                <h4>Picture Ledge Shelving</h4>
+                                <p>Minimalist picture ledge shelves for rotating art displays in a modern hallway.</p>
+                                <span class="portfolio-category">Design & Fabrication</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 
                 <div class="portfolio-cta">
-                    <button class="secondary-button" disabled>View Portfolio</button>
-                    <p class="portfolio-note">Once live, this section will showcase your builds and framing examples.</p>
+                    <button class="secondary-button">View All Projects</button>
+                    <p class="portfolio-note">Ready to start your custom project? Let's discuss your vision.</p>
                 </div>
             </div>
         </div>
@@ -304,7 +416,10 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-brand">
-                    <h3>Display x Design</h3>
+                    <div class="footer-logo">
+                        <img src="logo.svg" alt="Display x Design" class="footer-logo-img">
+                        <h3>Display x Design</h3>
+                    </div>
                     <p>Custom Fabrication • Shelving • Framing • Installation</p>
                 </div>
                 <div class="footer-links">

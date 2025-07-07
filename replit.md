@@ -101,6 +101,10 @@ This repository contains a sleek, minimal portfolio website for Display x Design
 ```
 Changelog:
 - July 07, 2025. Initial setup
+- July 07, 2025. Added portfolio gallery with 6 filler project showcases
+- July 07, 2025. Implemented dropdown navigation menu for services
+- July 07, 2025. Created custom SVG logo placeholder and added to header/footer
+- July 07, 2025. Enhanced mobile responsiveness for portfolio and navigation
 ```
 
 ## User Preferences

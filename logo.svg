@@ -1,0 +1,28 @@
+<svg viewBox="0 0 120 40" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="120" height="40" fill="#000" rx="4"/>
+  
+  <!-- Letter D -->
+  <path d="M8 8 L8 32 L18 32 Q24 32 24 20 Q24 8 18 8 Z M12 12 L16 12 Q20 12 20 20 Q20 28 16 28 L12 28 Z" fill="#fff"/>
+  
+  <!-- Letter X -->
+  <path d="M28 8 L32 8 L36 16 L40 8 L44 8 L38 20 L44 32 L40 32 L36 24 L32 32 L28 32 L34 20 Z" fill="#fff"/>
+  
+  <!-- Letter D -->
+  <path d="M48 8 L48 32 L58 32 Q64 32 64 20 Q64 8 58 8 Z M52 12 L56 12 Q60 12 60 20 Q60 28 56 28 L52 28 Z" fill="#fff"/>
+  
+  <!-- Separator line -->
+  <line x1="70" y1="12" x2="70" y2="28" stroke="#fff" stroke-width="2"/>
+  
+  <!-- Geometric shapes representing design/fabrication -->
+  <rect x="76" y="12" width="8" height="8" fill="#fff"/>
+  <rect x="86" y="16" width="8" height="8" fill="#fff"/>
+  <rect x="96" y="14" width="8" height="8" fill="#fff"/>
+  <rect x="106" y="18" width="8" height="8" fill="#fff"/>
+  
+  <!-- Small design elements -->
+  <circle cx="80" cy="30" r="2" fill="#fff"/>
+  <circle cx="90" cy="30" r="2" fill="#fff"/>
+  <circle cx="100" cy="30" r="2" fill="#fff"/>
+  <circle cx="110" cy="30" r="2" fill="#fff"/>
+</svg>
