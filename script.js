@@ -13,6 +13,9 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Initialize contact form
     initContactForm();
+    
+    // Initialize portfolio modal
+    initPortfolioModal();
 });
 
 // Navigation functionality
@@ -286,6 +289,119 @@ function debounce(func, wait) {
         clearTimeout(timeout);
         timeout = setTimeout(later, wait);
     };
+}
+
+// Portfolio Modal functionality
+function initPortfolioModal() {
+    const modal = document.getElementById('portfolioModal');
+    const modalImage = document.getElementById('modalImage');
+    const modalTitle = document.getElementById('modalTitle');
+    const modalDescription = document.getElementById('modalDescription');
+    const modalClose = document.querySelector('.modal-close');
+    const modalPrev = document.getElementById('modalPrev');
+    const modalNext = document.getElementById('modalNext');
+    const portfolioItems = document.querySelectorAll('.portfolio-item');
+    
+    let currentIndex = 0;
+    
+    // Portfolio data with descriptions
+    const portfolioData = [
+        {
+            title: 'Floating Shelves',
+            description: 'Custom floating shelves designed for modern living spaces. Clean lines and hidden brackets create a minimalist aesthetic while providing functional storage.'
+        },
+        {
+            title: 'Custom Framing',
+            description: 'Museum-quality framing services for artwork, photographs, and collectibles. Conservation materials and professional techniques ensure lasting protection.'
+        },
+        {
+            title: 'Gallery Walls',
+            description: 'Professionally designed and installed gallery walls. Precise spacing and expert hanging techniques create stunning visual displays.'
+        },
+        {
+            title: 'Display Cases',
+            description: 'Custom display cases for collections and valuable items. Glass construction with integrated lighting options for optimal presentation.'
+        },
+        {
+            title: 'Library Systems',
+            description: 'Floor-to-ceiling library and shelving systems. Adjustable configurations and built-in features for organized storage solutions.'
+        },
+        {
+            title: 'Picture Ledges',
+            description: 'Minimalist picture ledge shelves perfect for rotating displays. Easy to rearrange and update your artwork and photos.'
+        }
+    ];
+    
+    // Open modal when portfolio item is clicked
+    portfolioItems.forEach((item, index) => {
+        item.addEventListener('click', () => {
+            currentIndex = index;
+            openModal();
+        });
+    });
+    
+    // Close modal
+    modalClose.addEventListener('click', closeModal);
+    modal.addEventListener('click', (e) => {
+        if (e.target === modal) {
+            closeModal();
+        }
+    });
+    
+    // Navigation
+    modalPrev.addEventListener('click', () => {
+        currentIndex = (currentIndex - 1 + portfolioData.length) % portfolioData.length;
+        updateModalContent();
+    });
+    
+    modalNext.addEventListener('click', () => {
+        currentIndex = (currentIndex + 1) % portfolioData.length;
+        updateModalContent();
+    });
+    
+    // Keyboard navigation
+    document.addEventListener('keydown', (e) => {
+        if (modal.style.display === 'block') {
+            if (e.key === 'Escape') {
+                closeModal();
+            } else if (e.key === 'ArrowLeft') {
+                modalPrev.click();
+            } else if (e.key === 'ArrowRight') {
+                modalNext.click();
+            }
+        }
+    });
+    
+    function openModal() {
+        modal.style.display = 'block';
+        document.body.style.overflow = 'hidden';
+        updateModalContent();
+    }
+    
+    function closeModal() {
+        modal.style.display = 'none';
+        document.body.style.overflow = 'auto';
+    }
+    
+    function updateModalContent() {
+        const data = portfolioData[currentIndex];
+        const portfolioItem = portfolioItems[currentIndex];
+        const svg = portfolioItem.querySelector('svg');
+        
+        // Clone and scale the SVG for the modal
+        if (svg) {
+            const clonedSvg = svg.cloneNode(true);
+            clonedSvg.style.width = '100%';
+            clonedSvg.style.height = 'auto';
+            clonedSvg.style.maxHeight = '400px';
+            
+            modalImage.innerHTML = '';
+            modalImage.appendChild(clonedSvg);
+        }
+        
+        modalTitle.textContent = data.title;
+        modalDescription.textContent = data.description;
+    }
 }
 
 // Add scroll performance optimization

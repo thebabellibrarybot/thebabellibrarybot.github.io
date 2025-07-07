@@ -267,7 +267,7 @@
                     <!-- Portfolio Gallery -->
                     <div class="portfolio-gallery">
                         <div class="portfolio-grid">
-                            <div class="portfolio-item">
+                            <div class="portfolio-item" data-portfolio="0">
                                 <div class="portfolio-image">
                                     <svg
                                         viewBox="0 0 400 300"
@@ -663,6 +663,22 @@
                 </div>
             </div>
         </footer>
+
+        <!-- Portfolio Modal -->
+        <div id="portfolioModal" class="modal">
+            <div class="modal-content">
+                <span class="modal-close">&times;</span>
+                <button class="modal-nav modal-prev" id="modalPrev">&#8249;</button>
+                <button class="modal-nav modal-next" id="modalNext">&#8250;</button>
+                <div class="modal-image-container">
+                    <div class="modal-image" id="modalImage"></div>
+                    <div class="modal-info">
+                        <h3 id="modalTitle"></h3>
+                        <p id="modalDescription"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
 
         <!-- Scripts -->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/feather-icons/4.29.0/feather.min.js"></script>
