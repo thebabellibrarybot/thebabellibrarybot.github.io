@@ -667,7 +667,7 @@ section {
     .nav-menu {
         position: fixed;
         left: -100%;
-        top: 80px;
+        top: 70px;
         flex-direction: column;
         background-color: #fff;
         width: 100%;
@@ -675,10 +675,23 @@ section {
         transition: 0.3s;
         box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
         padding: 2rem 0;
+        z-index: 999;
+        border-top: 1px solid #eee;
     }
 
     .nav-menu.active {
         left: 0;
+    }
+    
+    .nav-menu .nav-link {
+        display: block;
+        padding: 1rem 0;
+        font-size: 1.1rem;
+        border-bottom: 1px solid #f0f0f0;
+    }
+    
+    .nav-menu .nav-link:last-child {
+        border-bottom: none;
     }
 
     .nav-toggle {

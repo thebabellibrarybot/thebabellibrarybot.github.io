@@ -1,6 +1,9 @@
 // Initialize Feather Icons
 document.addEventListener('DOMContentLoaded', function() {
-    feather.replace();
+    // Check if feather is available
+    if (typeof feather !== 'undefined') {
+        feather.replace();
+    }
     
     // Initialize navigation
     initNavigation();
@@ -36,7 +39,7 @@ function initNavigation() {
 
     // Close mobile menu when clicking outside
     document.addEventListener('click', (e) => {
-        if (!navToggle.contains(e.target) && !navMenu.contains(e.target)) {
+        if (navToggle && navMenu && !navToggle.contains(e.target) && !navMenu.contains(e.target)) {
             navToggle.classList.remove('active');
             navMenu.classList.remove('active');
         }
